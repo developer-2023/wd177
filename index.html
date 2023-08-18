@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+            function - return of object
+        */
+
+        function employee(name, surname, email, age, profession) {
+            if (name.length < 3) return null;
+            if (surname.length < 3) return null;
+            if (email.length < 3) return null;
+            if (age < 18) return null;
+            if (profession.length < 3) return null;
+
+            if (profession != "programmer" && 
+                profession != "admin" && 
+                profession != "manager") {
+                return null;
+            }
+
+            const obj = {
+                company: "Example Ltd.",
+                name: name,
+                surname: surname,
+                email: email,
+                age: age,
+                profession: profession
+            }
+
+            return obj;
+        }
+
+            const employee1 = employee("Mark", "Waldberg", "mark@yahoo.com", 33, "programmer");
+            const employee2 = employee("Ellis", "White", "ellis@hotmail.com", 24, "manager");
+            const employee3 = employee("Sara", "Carlsson", "s.carlsson@.spax.com", 17, "admin");
+
+            console.log(employee1);
+            console.log(employee2);
+            console.log(employee3);
+    </script>
+</body>
+</html>
